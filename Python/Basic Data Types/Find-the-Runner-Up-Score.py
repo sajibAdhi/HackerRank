@@ -8,7 +8,7 @@ if __name__ == '__main__':
             if -100 <= num and num <= 100:
                 return num
 
-        arr = map(inputCheck, input().split())[0:n]
+        arr = map(inputCheck, input().split())
         elements = list(arr)
 
         if len(elements) == n:
