@@ -1,4 +1,15 @@
 if __name__ == '__main__':
+    def secondGreatestNumber(elements):
+        maxElement = max(elements)
+        secondGreatest = None
+        for element in elements:
+            if maxElement > element:
+                if (secondGreatest is None):
+                    secondGreatest = element
+                elif(secondGreatest < element):
+                    secondGreatest = element
+        return secondGreatest
+
     n = int(input())
 
     if 2 <= n and n <= 10:
@@ -12,15 +23,5 @@ if __name__ == '__main__':
         elements = list(arr)
 
         if len(elements) == n:
-
-            maxElement = max(elements)
-            lessThanMax = None
-
-            for element in elements:
-                if maxElement > element:
-                    if (lessThanMax is None):
-                        lessThanMax = element
-                    elif(lessThanMax < element):
-                        lessThanMax = element
-
+            lessThanMax = secondGreatestNumber(elements)
             print(lessThanMax)

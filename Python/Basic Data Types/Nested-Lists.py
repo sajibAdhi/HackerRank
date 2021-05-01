@@ -1,5 +1,6 @@
-def secondLowestNumber(elements, lowestElemtnt):
+def secondLowestNumber(elements):
     """Get Second Lowest Number form any List()"""
+    lowestElemtnt = min(elements)
     secondLowest = None
     for element in elements:
         if(element > lowestElemtnt):
@@ -29,11 +30,8 @@ for _ in range(N):
     names.append(name)
     scores.append(score)
 
-# Gets the Lowest score of  Students
-lowestScore = min(scores)
-
 # get the second lowest grade
-sln = secondLowestNumber(scores, lowestScore)
+sln = secondLowestNumber(scores)
 
 newNamesList = list()
 for ind in range(N):
