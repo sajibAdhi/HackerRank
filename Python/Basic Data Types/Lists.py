@@ -1,16 +1,16 @@
 if __name__ == '__main__':
     N = int(input())
-    
+
     newList = list()
-    count = 0;
-    
+    count = 0
+
     while(True):
-        
+
         if (count < N):
             operation = input().split()
-            
+
             if (operation[0] == "insert"):
-                newList.insert(int(operation[1]),int(operation[2]))
+                newList.insert(int(operation[1]), int(operation[2]))
             elif (operation[0] == "print"):
                 print(newList)
             elif (operation[0] == "remove"):
@@ -25,6 +25,6 @@ if __name__ == '__main__':
                 newList.reverse()
             else:
                 break
-            count = count +1
+            count = count + 1
         else:
             break
