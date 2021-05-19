@@ -12,8 +12,9 @@ def count_substring(string, sub_string):
     return count
 
 if __name__ == '__main__':
-    string = raw_input().strip()
-    sub_string = raw_input().strip()
+    string = input().strip()
+    sub_string = input().strip()
     
     count = count_substring(string, sub_string)
-    print count
+
+    print(count)
