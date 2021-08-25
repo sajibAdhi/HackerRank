@@ -15,6 +15,7 @@ import sys
 #  2. INTEGER_ARRAY ar
 #
 
+
 def sockMerchant(n, ar):
     socks = {}
     sockPairs = 0
@@ -26,7 +27,7 @@ def sockMerchant(n, ar):
     for key in socks:
         sockPairs = sockPairs + (socks[key]//2)
     return sockPairs
-        
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
