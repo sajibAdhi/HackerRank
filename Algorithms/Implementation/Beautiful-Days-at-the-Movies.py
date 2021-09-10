@@ -16,33 +16,35 @@ import sys
 #  3. INTEGER k
 #
 
+
 def reverseNumber(number):
-    # Initiate value to null  
-    revs_number = 0  
-    
-    # reverse the integer number using the while loop  
-    
-    while (number > 0):  
-        # Logic  
-        remainder = number % 10  
-        revs_number = (revs_number * 10) + remainder  
-        number = number // 10  
+    # Initiate value to null
+    revs_number = 0
+
+    # reverse the integer number using the while loop
+
+    while (number > 0):
+        # Logic
+        remainder = number % 10
+        revs_number = (revs_number * 10) + remainder
+        number = number // 10
     return revs_number
 
+
 def beautifulDays(i, j, k):
-    
+
     # Beautiful Days Counter
     beautiful_days = 0
-    
+
     # run throw i to j
-    for x in range(i,j+1):
+    for x in range(i, j+1):
         sub = abs(x - reverseNumber(x))
-        if (sub % k) == 0 :
+        if (sub % k) == 0:
             beautiful_days += 1
-    
+
     return beautiful_days
 
-    
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
