@@ -15,17 +15,14 @@ import sys
 
 def quickSort(arr):
     # Write your code here
-    middle = arr[0]
+    middle = [arr[0]]
     left = []
     right = []
-    newarr = []
     for i in range(1,len(arr)):
-        if arr[i] > middle: right.append(arr[i])
+        if arr[i] > middle[0]: right.append(arr[i])
         else: left.append(arr[i])
-    newarr.extend(left)
-    newarr.append(middle)
-    newarr.extend(right)
-    return newarr
+
+    return left+middle+right
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
